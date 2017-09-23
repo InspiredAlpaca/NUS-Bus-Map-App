@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools" android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:baselineAligned="false"
+              android:id="@+id/mainLayout" android:keepScreenOn="true" android:weightSum="1">
+
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" android:id="@+id/infoView">
+
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" android:id="@+id/map">
+        </LinearLayout>
+        <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/table"
+                android:background="@android:color/holo_orange_dark">
+
+            <TableRow android:layout_width="match_parent" android:layout_height="match_parent">
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/busStopStart" android:textSize="24sp"
+                        android:layout_alignParentTop="true" android:layout_toEndOf="@+id/textView2"
+                        android:layout_marginStart="11dp" android:textColor="@android:color/background_light"/>
+            </TableRow>
+            <TableRow android:layout_width="match_parent" android:layout_height="match_parent"
+                      android:id="@+id/endTable" android:visibility="invisible">
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/busStopEnd" android:textSize="16sp"
+                        android:layout_alignBaseline="@+id/textView3" android:layout_alignBottom="@+id/textView3"
+                        android:layout_alignStart="@+id/busStopStart" android:paddingLeft="10dp"
+                        android:textColor="@android:color/white"/>
+            </TableRow>
+            <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" android:id="@+id/busTable" android:visibility="invisible"
+                    android:paddingTop="10dp">
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/buses" android:textSize="18sp"
+                        android:layout_alignParentTop="true" android:layout_toEndOf="@+id/textView2"
+                        android:layout_marginStart="11dp" android:textColor="@android:color/background_light"/>
+            </TableRow>
+        </TableLayout>
+    </FrameLayout>
+</LinearLayout>
